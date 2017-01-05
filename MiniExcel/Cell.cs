@@ -11,14 +11,17 @@ namespace MiniExcel
 
     class Cell
     {
+        private string _rawData;
+
         public CellType Type { get; set; }
         public Status Status { get; set; }
         public string Error { get; set; }
         public int Result { get; set; }
         public string StringResult { get; set; }
 
-        public Cell()
+        public Cell(string rawData)
         {
+            _rawData = rawData;
             Status = Status.UNDEFINED;
         }
     }
